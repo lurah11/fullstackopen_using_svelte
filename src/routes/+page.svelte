@@ -1,12 +1,31 @@
 <script>
-    import Part from '$lib/Part.svelte'
+   import Header from '$lib/Header.svelte';
+   import Content from '$lib/Content.svelte'; 
+   import Total from '$lib/Total.svelte';
+   const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
+
 </script>
 
 
-<h1>EXERCISE 1.1 AND 1.2</h1>
+<h1>EXERCISE 1.3 TO 1.5</h1>
 
-<Part partTitle={'part 0'} contents={[]} />
-<Part partTitle={'part 1'} contents={['courseinfo','unicafe','anecdote']} />
-<Part partTitle={'part 2'} contents={['phonebook','countries']} />
-
+<Header name={course.name} />
+<Content parts = {course.parts}/>
+<Total parts = {course.parts}/>
 
